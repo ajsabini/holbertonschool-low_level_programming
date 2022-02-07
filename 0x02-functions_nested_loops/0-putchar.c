@@ -1,5 +1,6 @@
 #include <unistd.h>
-#include "_putchar.c"
+#include "main.h"
+
 /**
  * main - imprimir _putchar
  * Return: siempre 0
@@ -13,7 +14,8 @@ int main(void)
 
 	for (i = 0; i < tamanio; i++)
 	_putchar(cadena[i]);
-	
+
 	_putchar('\n');
+
 	return (0);
 }
