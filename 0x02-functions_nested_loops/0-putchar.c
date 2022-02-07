@@ -12,7 +12,8 @@ int main(void)
 	int i;
 
 	for (i = 0; i < tamanio; i++)
-		_putchar(cadena[i]);
+	_putchar(cadena[i]);
+	
 	_putchar('\n');
 	return (0);
 }
