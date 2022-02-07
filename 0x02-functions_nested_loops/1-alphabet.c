@@ -1,13 +1,17 @@
-#include <stdio.h>
+#include <unistd.h>
 #include "main.h"
 
 /**
-* main - algo
-* Return: siempre 0
-*/
+ *  * main - imprimir _putchar
+ *   * Return: siempre 0
+ *    */
 
-int main(void)
+
+void print_alphabet()
 {
-	print_alphabet();
-	return (0);
+	char a;
+
+	for (a = 'a'; a <= 'z'; a++)
+		_putchar(a);
+
 }
