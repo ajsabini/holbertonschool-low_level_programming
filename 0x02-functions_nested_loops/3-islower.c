@@ -4,6 +4,7 @@
 /**
  * _islower - comprobar si es minuscula
  * @c: el numero a chequear
+ * Return: 1 si es true
  */
 
 int _islower(int c)
