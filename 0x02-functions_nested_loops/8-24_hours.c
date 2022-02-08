@@ -4,14 +4,14 @@
 
 /**
  * jack_bauer - pasar a valor absoluto
- */            
+ */
 
-void jack_bauer()
+void jack_bauer(void)
 {
 
 	int horas = 0;
 	int minutos = 0;
-	
+
 	while (horas < 24)
 	{
 		while (minutos < 60)
@@ -23,11 +23,8 @@ void jack_bauer()
 			_putchar('0' + (minutos % 10));
 			_putchar('\n');
 			minutos++;
-		}	
-
+		}
 		minutos = 0;
 		horas++;
-
-	}	
-
+	}
 }
