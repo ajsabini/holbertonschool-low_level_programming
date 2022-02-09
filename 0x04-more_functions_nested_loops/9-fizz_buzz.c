@@ -16,10 +16,10 @@ int main(void)
 		{
 			if (i == 100)
 			{
-				printf("Fizz Buzz");
+				printf("FizzBuzz");
 			}
 			{
-				printf("Fizz Buzz ");
+				printf("FizzBuzz ");
 			}
 		}
 		else if (i % 3 == 0)
