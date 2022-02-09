@@ -21,12 +21,12 @@ void print_diagonal(int n)
 			_putchar('\\');
 			_putchar('\n');
 
-			if(bsl < n)
+			if (bsl < n)
 			{
 
 				for (esp = 1; esp <= bsl; esp++)
 					_putchar(' ');
-		
+
 			}
 		}
 	}
