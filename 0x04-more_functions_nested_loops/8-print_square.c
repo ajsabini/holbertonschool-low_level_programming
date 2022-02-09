@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_line - imprime _ n veces
+ * print_square - imprime # n veces
  * @n: un entero
  */
 
