@@ -1,13 +1,14 @@
 #include "main.h"
 #include <stdio.h>
 
-/** print integer - imprimir numero
+/** 
+ * print integer - imprimir numero
  * @n: parametro que recibe
- *
  * Return: void
  */
 void print_number(int n)
 {
+
 	unsigned int m;
 
 	if (n >= 0)
