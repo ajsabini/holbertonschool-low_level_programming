@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 
-/** 
- * print integer - imprimir numero
+/**
+ * print_number - imprimir numero
  * @n: parametro que recibe
  * Return: void
  */
