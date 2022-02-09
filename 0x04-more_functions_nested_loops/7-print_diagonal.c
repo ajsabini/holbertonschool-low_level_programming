@@ -3,6 +3,7 @@
 
 /**
  * print_diagonal - imprime la diagonal
+ * @n: valor
  */
 
 void print_diagonal(int n)
