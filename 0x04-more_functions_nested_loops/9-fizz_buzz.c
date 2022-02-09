@@ -14,7 +14,13 @@ int main(void)
 
 		if (i % 3 == 0 && i % 5 == 0)
 		{
-			printf("Fizz Buzz ");
+			if (i == 100)
+			{
+				printf("Fizz Buzz");
+			}
+			{
+				printf("Fizz Buzz ");
+			}
 		}
 		else if (i % 3 == 0)
 		{
