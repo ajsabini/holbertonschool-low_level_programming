@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * reset_to_98 - imprime la diagonal
+ * swap_int - imprime la diagonal
  * @a: valor
  * @b: segundo valor
  */
