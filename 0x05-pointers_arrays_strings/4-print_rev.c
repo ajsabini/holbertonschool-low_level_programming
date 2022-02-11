@@ -3,21 +3,21 @@
 #include <string.h>
 
 /**
- * print_rev - imprime la diagonal
+ * print_rev - imprime al reves
  * @s: valor
  */
 
 void print_rev(char *s)
 {
-	/*char *inv;*/
+	char *t = s;
 
-	int i;
-
-	for (i = strlen(s); i >= 0; i--)
+	if (s)
 	{
-		/*printf("%c", s[i]);*/
-		putchar(s[i]);
-	}
-
-	/*puts(inv);*/
+		while (*t)
+		++t;	
+		while (s < t--)
+			putchar(*t);
+		
+		putchar('\n');
+	}	
 }
