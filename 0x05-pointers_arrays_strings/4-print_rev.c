@@ -5,19 +5,19 @@
 /**
  * print_rev - imprime al reves
  * @s: valor
- */
+*/
 
 void print_rev(char *s)
 {
-	char *t = s;
+	int i;
 
-	if (s)
+	i = strlen(s);
+
+	while (i > 0)
 	{
-		while (*t)
-		++t;	
-		while (s < t--)
-			putchar(*t);
-		
-		putchar('\n');
-	}	
+		putchar(s[i]);
+		i--;
+
+	}
+
 }
