@@ -10,12 +10,21 @@
 void rev_string(char *s)
 {
 	char *aux = s;
+	char auxV[999];
 	int i;
 	int j = 0;
 
 	for (i = strlen(s) - 1; i >= 0; i--)
 	{
-		s[j] = aux[i];
+		auxV[j] = aux[i];
+		j++;
+	}
+
+	j = 0;
+	
+	for (i = strlen(s) - 1; i >= 0; i--)
+	{
+		s[j] = auxV[j];
 		j++;
 	}
 
