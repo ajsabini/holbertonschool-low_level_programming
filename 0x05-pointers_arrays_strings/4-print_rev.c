@@ -11,9 +11,9 @@ void print_rev(char *s)
 {
 	int i;
 
-	i = strlen(s) + 1;
+	i = strlen(s);
 
-	while (i > 0)
+	while (i >= 0)
 	{
 		putchar(s[i]);
 		i--;
