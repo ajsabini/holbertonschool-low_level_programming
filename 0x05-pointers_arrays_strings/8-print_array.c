@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- * puts_half - imprim la segunda mitad de la cadena
- * @str: lo que nos pasan como parametro
+ * print_array - imprim la segunda mitad de la cadena
+ * @a: lo que nos pasan como parametro
+ * @n: f,ldsk
  * Return: void
  */
 
@@ -13,7 +14,7 @@ void print_array(int *a, int n)
 
 	for (i = 0; i < n; i++)
 	{
-		if (i == 4)
+		if (i == n -1)
 		{
 			printf("%d", a[i]);
 		}
