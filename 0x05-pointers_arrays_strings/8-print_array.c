@@ -14,7 +14,7 @@ void print_array(int *a, int n)
 
 	if(a)
 	{
-		if(n > 0)
+		if(n >= 0)
 		{
 
 			for (i = 0; i < n; i++)
