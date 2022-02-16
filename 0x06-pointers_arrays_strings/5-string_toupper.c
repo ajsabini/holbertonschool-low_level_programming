@@ -3,9 +3,8 @@
 #include <stdio.h>
 
 /**
- * string_toupperrray - da vuelta un string
- * @a: puntero que trae el array de enteros
- * @n: largo de array
+ * string_toupper - da vuelta un string
+ * @c: puntero que trae el array de enteros
  * Return: la copia
  */
 
