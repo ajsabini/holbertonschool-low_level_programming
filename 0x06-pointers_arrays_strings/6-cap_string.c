@@ -20,8 +20,8 @@ char *cap_string(char *c)
 		{
 			n = 0;
 		}
-	       	else
-	       	{
+		else
+		{
 			if (n == 0 && (c[i] > 96 && c[i] < 123))
 			{
 				c[i] = c[i] - 32;
