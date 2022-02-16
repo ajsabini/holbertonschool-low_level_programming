@@ -15,6 +15,7 @@ int _strcmp(char *s1, char *s2)
 	int s1_len = strlen(s1);
 	int s2_len = strlen(s2);
 	int a = s2_len;
+	int devolver;
 
 	if (s1_len >= s2_len)
 	{
@@ -25,15 +26,15 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (s1[i] == s2[i])
 		{
-			a = 0;
+			devolver = 0;
 		}
 		else
 		{
-			a = s1[i] - s2[i];
+			devolver = s1[i] - s2[i];
 			break;
 		}
 
 	}
 
-	return (a);
+	return (devolver);
 }
