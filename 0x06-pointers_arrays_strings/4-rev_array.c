@@ -1,6 +1,5 @@
 #include "main.h"
 #include <string.h>
-#include <stdio.h>
 
 /**
  * reverse_array - da vuelta un string
@@ -13,7 +12,7 @@ void reverse_array(int *a, int n)
 {
 	int x;
 	int temporal;
-	
+
 	for (x = 0; x < n / 2; x++)
 	{
 		temporal = a[x];
