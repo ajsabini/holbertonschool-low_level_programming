@@ -3,16 +3,16 @@
 #include <stdio.h>
 
 /**
- *  * _strcat - imprime la diagonal
- *   * @dest: valor
- * @src: segundo valor
+ * _strcmp - compara string
+ * @s1: primer string
+ * @s2: segundo string
  * Return: la copia
  */
 
 int _strcmp(char *s1, char *s2)
 {
 	int i = 0;
-	int s1_len = strlen(s1);	
+	int s1_len = strlen(s1);
 	int s2_len = strlen(s2);
 	int a = s2_len;
 
@@ -29,16 +29,16 @@ int _strcmp(char *s1, char *s2)
 		}
 		else if (s1[i] > s2[i])
 		{
-			a = 15;
+			a = s1[i] - s2[i];
 			break;
 		}
 		else
 		{
-			a = -15;
+			a = s2[i] - s1[i];
 			break;
 		}
 
 	}
-	
+
 	return (a);
 }

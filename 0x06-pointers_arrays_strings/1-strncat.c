@@ -2,9 +2,10 @@
 #include <string.h>
 
 /**
- * _strcat - imprime la diagonal
+ * _strncat - imprime la diagonal
  * @dest: valor
  * @src: segundo valor
+ * @n: cantidad de caracteres
  * Return: la copia
  */
 
@@ -17,6 +18,6 @@ char *_strncat(char *dest, char *src, int n)
 		dest[dest_len + i] = src[i];
 	dest[dest_len + i] = '\0';
 
-	return dest;
+	return (dest);
 	/*return (strncat(dest, src, n));*/
 }
