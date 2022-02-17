@@ -11,16 +11,20 @@
 char *rot13(char *c)
 {
 	int n;
+	int k;
+	char principio[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char final[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (n = 0; c[n]; n++)
-	{
-		if ((c[n] > 63 && c[n] < 78) || (c[n] > 96 && c[n] < 110))
+	{	
+		k = 0;
+		while (principio[k])
 		{
-			c[n] = c[n] + 13;
-		}
-		else if ((c[n] > 77 && c[n] < 91) || (c[n] > 95 && c[n] < 123))
-		{
-			c[n] = c[n] - 13;
+			if (c[n] == principio[k])
+			{
+				c[n] = final[k];
+			}
+			k++;
 		}
 	}
 
