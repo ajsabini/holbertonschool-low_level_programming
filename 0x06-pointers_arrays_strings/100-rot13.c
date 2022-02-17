@@ -13,7 +13,7 @@ char *rot13(char *c)
 	int n;
 
 	for (n = 0; c[n]; n++)
-	{	
+	{
 		if ((c[n] > 63 && c[n] < 78) || (c[n] > 96 && c[n] < 110))
 		{
 			c[n] = c[n] + 13;
