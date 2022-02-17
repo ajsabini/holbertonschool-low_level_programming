@@ -16,7 +16,7 @@ char *rot13(char *c)
 	char final[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (n = 0; c[n]; n++)
-	{	
+	{
 		k = 0;
 		while (principio[k])
 		{
