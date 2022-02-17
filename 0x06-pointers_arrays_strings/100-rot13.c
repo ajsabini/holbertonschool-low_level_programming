@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * leet - cambia letras por numeros
+ * rot13 - cambia letras por numeros
  * @c: puntero que trae el array de char
  * Return: el array cambiado
  */
