@@ -20,7 +20,7 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[k] == 44)
 				break;
-			
+
 			if (accept[i] == s[k])
 			{
 				n++;
