@@ -3,8 +3,8 @@
 
 /**
  * _strstr - encontrar caracter
- * @s: puntero con string
- * @accept: caracter a encontrar
+ * @haystack: puntero con string
+ * @needle: caracter a encontrar
  * Return: total
  */
 
