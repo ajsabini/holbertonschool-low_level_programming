@@ -10,24 +10,28 @@
 
 char *_strchr(char *s, char c)
 {
-	int i = 0;
+	int y = 0;
 	int si = 0;
-	char *pos = s;
+	char *p = NULL;
 
-	while (s[i])
+	p = s;
+
+	if (s != NULL)
 	{
-		if (s[i] == c)
+		for (; s[si]; si++)
 		{
-			pos = s + i;
-			si = 1;
-			break;
+			if (s[si] == c)
+			{
+				y = 1;
+				break;
+			}
 		}
-		i++;
-	}
-	if (si == 0 || c == 0)
-	{
-		pos = s + i;
 	}
 
-	return (pos);
+	if (y || c == 0)
+		p = s + si;
+	else
+		p = NULL;
+
+	return (p);
 }
