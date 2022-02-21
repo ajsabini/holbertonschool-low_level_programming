@@ -20,7 +20,7 @@ char *_strstr(char *haystack, char *needle)
 		{
 			if (haystack[k] == needle[i])
 			{
-				p = haystack + k;
+				p = needle + i;
 				return (p);
 			}
 		}
