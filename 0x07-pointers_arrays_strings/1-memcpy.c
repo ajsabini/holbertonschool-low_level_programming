@@ -5,6 +5,7 @@
  * _memcpy - imprime la diagonal
  * @dest: el array copiado
  * @src: el array a copiar
+ * @n: valor
  * Return: la copia
  */
 
@@ -17,5 +18,5 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 		*dest++ = src[i];
 		i++;
 	}
-	return dest;
+	return (dest);
 }

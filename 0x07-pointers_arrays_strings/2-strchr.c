@@ -5,7 +5,7 @@
  * _strchr - encontrar caracter
  * @s: puntero con string
  * @c: caracter a encontrar
- * Return: 
+ * Return: pos
  */
 
 char *_strchr(char *s, char c)
@@ -23,5 +23,5 @@ char *_strchr(char *s, char c)
 		i++;
 	}
 
-	return pos;
+	return (pos);
 }
