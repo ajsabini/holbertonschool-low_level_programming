@@ -15,12 +15,17 @@ char *_strchr(char *s, char c)
 
 	while (s[i])
 	{
-		if (s[i] == c || c == 0)
+		if (s[i] == c)
 		{
 			pos = s + i;
 			break;
 		}
 		i++;
+		if(c == 0)
+		{
+			pos = s + i;
+			break;
+		}
 	}
 
 	return (pos);
