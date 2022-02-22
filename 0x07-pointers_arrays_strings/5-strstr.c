@@ -1,30 +1,30 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * _strstr - encontrar caracter
- * @haystack: puntero con string
- * @needle: caracter a encontrar
- * Return: total
+ * _strstr - encontrar un string en una cadena
+ * @haystack: la cadena
+ * @needle: el string
+ * Return: NULL si no encuentra o lo que coincide
  */
-
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
-	int k;
-	char *p = NULL;
+        int i;
+        int k = 0;
 
-	for (i = 0; needle[i]; i++)
-	{
-		for (k = 0; haystack[k]; k++)
-		{
-			if (haystack[k] == needle[i])
-			{
-				p = needle + i;
-				return (p);
-			}
-		}
-	}
+        for (; needle[k] ;)
+                k++;
 
-	return (p);
+        for (; haystack != NULL;)
+        {
+                for (i = 0; needle[i]; i++)
+                {
+                        if (haystack[i] != needle[i])
+                                break;
+                }
+                if (i != k)
+                        haystack++;
+                else
+                        return (haystack);
+        }
+        return (NULL);
 }
