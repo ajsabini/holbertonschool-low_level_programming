@@ -5,7 +5,7 @@
 /**
  * _strlen_recursion - imprimir un string seguido de una linea
  * @s: el string
- * Return - void
+ * Return: el largo del string
  */
 
 int _strlen_recursion(char *s)
