@@ -3,14 +3,15 @@
 #include <string.h>
 
 /**
- * _strlen_recursion - imprimir un string seguido de una linea
- * @s: el string
- * Return: el largo del string
+ * factorial - devolver el factorial de un numero
+ * @n: el entero
+ * Return: el factorial de n
  */
 
 int factorial(int n)
 {
-	if(n == 0) {
+	if (n == 0)
+	{
 		return (1);
 	}
 	else if (n < 0)
@@ -19,6 +20,6 @@ int factorial(int n)
 	}
 	else
 	{
-		return n * factorial(n - 1);
+		return (n * factorial(n - 1));
 	}
 }
