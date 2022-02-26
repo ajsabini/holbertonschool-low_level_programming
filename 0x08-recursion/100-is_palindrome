@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include "main.h"
+#include <string.h>
+
+/**
+ * __wcmp - enontrar numero primo
+ * @n: entero
+ * @k: entero
+ * Return: el primo
+ */
+
+int __wcmp()
+{
+
+}
+
+
+/**
+ * wildcmp - saber si es numero primo
+ * @s1:
+ * @s2:
+ * Return: 1 si es primo, 0 si no es
+ */
+int wildcmp(char *s1, char *s2)
+{
+
+}
