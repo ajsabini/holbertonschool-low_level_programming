@@ -2,20 +2,23 @@
 #include <string.h>
 
 /**
- * _memset - imprime la diagonal
- * @s: valor
- * @b: segundo valor
- * @n: valor
- * Return: la copia
+ * *_strcat - qwe
+ * @dest: qwe
+ * @src: qwe
+ * Return: qwe
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *_strcat(char *dest, char *src)
 {
-	char *ptr = s;
+	int i;
+	int length = 0;
+	
+	while (dest[length] != '\0')
+		length++;
 
-	while (n-- > 0)
-		*ptr++ = b;
+	for (i = 0; src[i] != '\0'; length++)
+		dest[length] = sr[i];
 
-	return (s);
+	return (dest);
 
 }

@@ -1,9 +1,15 @@
+#include "main.h"
+
 /**
  * _isalpha - devuelve si es letra
- * @: pointer
+ * @c: pointer
  * Return: ret
  */
+
 int _isalpha(int c)
 {
-        return (0);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' <= 'Z'))
+		return (1);
+	else
+        	return (0);
 }
