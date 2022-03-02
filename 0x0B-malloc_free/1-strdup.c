@@ -14,18 +14,22 @@ char *_strdup(char *str)
 	int largo = 0;
 	int i;
 
-	while (str[largo] != '\0')
-		largo++;
-
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 	else
 	{
+		while (str[largo] != '\0')
+			largo++;
+
 		while (1)
 		{
 			duplicado = malloc(sizeof(char) * largo);
+			if (duplicado == NULL)
+			{
+					return (NULL);
+			}
 
 			for (i = 0; i < largo && str[i] != '\0'; i++)
 				duplicado[i] = str[i];
