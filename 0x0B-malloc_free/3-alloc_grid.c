@@ -14,6 +14,11 @@ int **alloc_grid(int width, int height)
 	int **doble;
 	int i;
 	
+	if (width < 1 || height < 1)
+	{
+		return (NULL);
+	}
+
 	doble = (int **)malloc(width*sizeof(int*));/* this will store base order of all the row in p */
 	for(i = 0; i < height; i++)
 		doble[i] = (int *)malloc(height*sizeof(int));/* this will create m row of n elements */
