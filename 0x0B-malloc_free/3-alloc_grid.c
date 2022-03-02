@@ -27,12 +27,13 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 	for(i = 0; i < height; i++)
+	{
 		doble[i] = (int *)malloc(width*sizeof(int));/* this will create m row of n elements */
-
-	if (doble == NULL)
-	{	
-		free(doble);
-		return (NULL);
+		if (doble[i] == NULL)
+		{
+			free(doble);
+			return (NULL);
+		}	
 	}
 
 	for (i = 0; doble[i]; i++)
