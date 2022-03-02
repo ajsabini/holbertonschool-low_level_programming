@@ -20,16 +20,16 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	doble = (int **)malloc(width * sizeof(int *));
+	doble = (int **)malloc(height * sizeof(int *));
 
 	if (doble == NULL)
 	{
 		free(doble);
 		return (NULL);
 	}
-	for (i = 0; i < width; i++)
+	for (i = 0; i < height; i++)
 	{
-		doble[i] = (int *)malloc(height * sizeof(int));
+		doble[i] = (int *)malloc(width * sizeof(int));
 
 		if (doble[i] == NULL)
 		{
