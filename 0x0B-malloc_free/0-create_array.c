@@ -4,15 +4,16 @@
 
 /**
  * char *create_array - imprimir un string seguido de una linea
- * @s: el string
- * Return - void
+ * @size: el largo
+ * @c: el ccaracter
+ * Return: void
  */
 
 char *create_array(unsigned int size, char c)
 {
 	char *array;
 	unsigned int i = 0;
-	
+
 	if (size == 0)
 	{
 		return (NULL);
