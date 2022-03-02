@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
 
 /**
  * int **alloc_grid - imprimir un string seguido de una linea
@@ -21,6 +21,11 @@ int **alloc_grid(int width, int height)
 	}
 
 	doble = (int **)malloc(width*sizeof(int*));/* this will store base order of all the row in p */
+	if (doble == NULL)
+	{
+		free(doble);
+		return (NULL);
+	}
 	for(i = 0; i < height; i++)
 		doble[i] = (int *)malloc(height*sizeof(int));/* this will create m row of n elements */
 
@@ -37,6 +42,5 @@ int **alloc_grid(int width, int height)
 	             doble[i][k] = 0;
 		}
 	}
-
 	return (doble);
 }
