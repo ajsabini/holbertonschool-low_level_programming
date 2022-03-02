@@ -20,14 +20,14 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	doble = (int **)malloc(width*sizeof(int*));/* this will store base order of all the row in p */
+	doble = (int **)malloc(height*sizeof(int*));/* this will store base order of all the row in p */
 	if (doble == NULL)
 	{
 		free(doble);
 		return (NULL);
 	}
 	for(i = 0; i < height; i++)
-		doble[i] = (int *)malloc(height*sizeof(int));/* this will create m row of n elements */
+		doble[i] = (int *)malloc(width*sizeof(int));/* this will create m row of n elements */
 
 	if (doble == NULL)
 	{	
