@@ -26,13 +26,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (n >= largo2)
 		n = largo2;
+
 	concatenados = malloc(largo1 + n + 1);
 
 	if (concatenados != NULL)
 	{
 		for (i = 0; s1[i];i++)
 			concatenados[i] = s1[i];
-		for (j = 0; j <= n; j++)
+		for (j = 0; j < n; j++)
 		{
 			concatenados[i] = s2[j];
 			i++;
