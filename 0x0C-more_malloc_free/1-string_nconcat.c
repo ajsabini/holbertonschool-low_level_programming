@@ -13,32 +13,31 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *concatenados = NULL;
-	unsigned int largo1 = 0, largo2 = 0, j = 0, i = 0;
+	char *p = NULL;
+	int i, t = 0;
+	unsigned int j, k = 0;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	
-	largo1 = strlen(s1);
-	largo2 = strlen(s2);
-
-	if (n >= largo2)
-		n = largo2;
-
-	concatenados = malloc(largo1 + n + 1);
-
-	if (concatenados != NULL)
+	(strlen(s2) > n) ? (k = n) : (k = strlen(s2));
+	/** si el largo de s2 es mayor que n iguala k a n,*/
+	/** si no iguala k al largo de s2 */
+	p = malloc(strlen(s1) + k + 1);
+	if (p != NULL)
 	{
-		for (i = 0; s1[i];i++)
-			concatenados[i] = s1[i];
-		for (j = 0; j < n; j++)
+		for (i = 0; s1[i]; i++)
 		{
-			concatenados[i] = s2[j];
+			p[t++] = s1[i];
+		}
+		for (j = 0; (s2[j] && (j < n)); j++)
+		{
+			p[t++] = s2[j];
 			i++;
 		}
-	}	
-	return (concatenados);
+		p[t] = '\0';
+	}
 
+	return (p);
 }
