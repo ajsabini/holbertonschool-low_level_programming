@@ -25,8 +25,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	largo2 = strlen(s2);
 
 	if (n >= largo2)
-		largo2 = n;
-	concatenados = malloc(largo1 + largo2 + 1);
+		n = largo2;
+	concatenados = malloc(largo1 + n + 1);
 
 	if (concatenados != NULL)
 	{
