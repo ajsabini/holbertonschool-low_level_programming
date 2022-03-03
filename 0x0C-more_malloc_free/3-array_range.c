@@ -13,11 +13,9 @@ int *array_range(int min, int max)
 	int i = 0, k = 0;
 
 	if (min > max)
-	{
 		return (NULL);
-	}
 
-	arreglo = malloc(sizeof(int) * max - min + 1);
+	arreglo = malloc(sizeof(int) * (max - min + 1));
 	if (arreglo != NULL)
 	{
 		for (i = min; i <= max; i++)
