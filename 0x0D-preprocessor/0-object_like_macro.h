@@ -1,5 +1,4 @@
-#if !defined(SIZE)
-
+#ifndef SIZE
 #define SIZE 1024
 
-#endif 
+#endif
