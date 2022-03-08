@@ -4,9 +4,9 @@
  * imprimeNombreArchivo - check the code
  * Return: Always 0.
  */
-void imprimeNombreArchivo()
+void imprimeNombreArchivo(void)
 {
-	printf("%s\n",__FILE__);
+	printf("%s\n", __FILE__);
 }
 
 /**
