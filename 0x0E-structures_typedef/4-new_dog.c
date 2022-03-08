@@ -4,7 +4,9 @@
 
 /**
  * *new_dog - check the code
- * @d: la estructura perro
+ * @name: la estructura perro
+ * @age: df
+ * @owner: dfds
  * Return: void
  */
 
@@ -14,7 +16,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	dogi = malloc(sizeof(struct dog));
 
-	if(dogi == NULL)
+	if (dogi == NULL)
 		return (NULL);
 
 	dogi->name = name;
