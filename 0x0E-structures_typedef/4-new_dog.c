@@ -21,33 +21,33 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dogi)
 	{
 		dogi->name = malloc(strlen(name) + 1);
-		if(dogi->name)
+		if (dogi->name)
 		{
-			for(i = 0; name[i]; i++)
+			for (i = 0; name[i]; i++)
 				dogi->name[i] = name[i];
-			dogi->name[i] = '\0';		
+			dogi->name[i] = '\0';
 		}
 		else
 		{
 			free(dogi);
 			return (NULL);
 		}
-		
+
 		dogi->age = age;
 
 		dogi->owner = malloc(strlen(owner) + 1);
-                if(dogi->owner)
-                {
-                        for(i = 0; owner[i]; i++)
-                                dogi->owner[i] = owner[i];
-                        dogi->owner[i] = '\0';
-                }
-                else
-                {
+		if (dogi->owner)
+		{
+			for (i = 0; owner[i]; i++)
+				dogi->owner[i] = owner[i];
+			dogi->owner[i] = '\0';
+		}
+		else
+		{
 			free(dogi->name);
-                        free(dogi);
-                        return (NULL);
-                }
+			free(dogi);
+			return (NULL);
+		}
 	}
 	return (dogi);
 }
