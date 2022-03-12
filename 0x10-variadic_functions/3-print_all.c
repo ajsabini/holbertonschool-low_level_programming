@@ -1,98 +1,97 @@
 #include "variadic_functions.h"
-#include <stdarg.h>
-#include <stdio.h>
-#include <stddef.h>
-#include <string.h>
+
 
 /**
- * print_string - imprime los strings
- * @s: parametero string
- * Return: void
+ * print_char - imprime carater
+ * @args: va_list on el arg a imprimir
+ * Return: asd
  */
-
-void print_string(va_list s)
+void print_char(va_list args)
 {
-	char *aux = va_arg(s, char*);
-
-	if (aux == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s", aux);
+	printf("%c", va_arg(args, int));
 }
 
-/**
- * print_integer - imprime los int
- * @i: parametero int
- * Return: void
- */
 
-void print_integer(va_list i)
+/**
+ * print_float - imprime float
+ * @args: va_list con el arg a imprimir
+ * Return: asd
+ */
+void print_float(va_list args)
 {
-	printf("%d", va_arg(i, int));
+	printf("%f", va_arg(args, double));
 }
 
-/**
- * print_char - imprime char
- * @c: parametro char
- * Return: void
- */
 
-void print_char(va_list c)
+/**
+ * print_int - imprime integer
+ * @args: va_list con el arg a imprimir
+ * Return: asd
+ */
+void print_int(va_list args)
 {
-	printf("%c", (char) va_arg(c, int));
+	printf("%i", va_arg(args, int));
 }
 
+
 /**
- * print_float - imprime los float
- * @f: parametro float
- * Return: void
+ * print_str - imprime string
+ * @args: va_list on el arg a imprimir
+ * Return: asd
  */
 
-void print_float(va_list f)
+void print_str(va_list args)
 {
-	printf("%f", (float) va_arg(f, double));
+	const char *str = va_arg(args, const char *);
+
+	if (!str)
+		str = "(nil)";
+	printf("%s", str);
 }
 
-/**
- * print_all - imprimir todo
- * @format: va_list, 
- * Return: void
- */
 
+/**
+ * print_all - imprime lo que le pasen
+ * @format: el formato, on los tipos de args
+ * @...: los valores a imprimir
+ */
 void print_all(const char * const format, ...)
 {
-	int i = 0;
-	int j = 0;
-	char *empty = "", *comma = ", ";
-	va_list p;
 
-	opp selector[] = {
-		{"c", print_char},
-		{"i", print_integer},
-		{"f", print_float},
-		{"s", print_string},
-		{NULL, NULL}
+	int i, j;
+	char *separator = "";
+
+	va_list valist;
+
+	print_t letter[] = {
+		{'c', print_char},
+		{'s', print_str},
+		{'i', print_int},
+		{'f', print_float},
+		{'\0', NULL}
 	};
 
-	va_start(p, format);
+	va_start(valist, format);
 
+	i = 0;
 	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
-		while (selector[j].c != NULL)
+		while (letter[j].print != '\0')
 		{
-			if (selector[j].c[0] == format[i])
+			if (letter[j].print == format[i])
 			{
-				printf("%s", empty);
-				selector[j].f(p);
-				empty = comma;
+				printf("%s", separator);
+				letter[j].p(valist);
+				separator = ", ";
 			}
 			j++;
 		}
 		i++;
 	}
+
+	va_end(valist);
+
 	printf("\n");
-	va_end(p);
+
 }
