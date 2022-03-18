@@ -10,7 +10,7 @@ size_t print_list(const list_t *h)
 {
 	int retorno = 0;
 
-	while (*h)
+	for (; h;)
 	{
 		if (!h->str)
 		{
