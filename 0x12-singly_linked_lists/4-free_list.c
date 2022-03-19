@@ -1,4 +1,5 @@
 #include "lists.h"
+
 /**
  * free_list - haer un free de la lista list_t.
  * @head: nodo head
