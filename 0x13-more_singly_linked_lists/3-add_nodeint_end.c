@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * add_node_end - agregar un nuevo nodo al final de la lista
+ * add_nodeint_end - agregar un nuevo nodo al final de la lista
  * @head: nodo head
- * @str: string
+ * @n: integer
  * Return: new
  */
 
