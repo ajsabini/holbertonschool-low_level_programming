@@ -13,8 +13,8 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	if (index > 33)
 		return (-1);
-	
-	if(!n)
+
+	if (!n)
 		return (-1);
 
 	i = (n & (1 << index));
