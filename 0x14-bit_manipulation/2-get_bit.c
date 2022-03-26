@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get - nos dan un indice, devolvemos el valor de un bit
+ * get_bit - nos dan un indice, devolvemos el valor de un bit
  * @n: numero que nos pasan
  * @index: el indice
  * Return: -1 si da error, el valor del bit en el indice
