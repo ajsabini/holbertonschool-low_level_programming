@@ -4,7 +4,8 @@
  * read_textfile - leer un archivo
  * @filename: el nombre de archivo
  * @letters: el numero de letras
- * Return: si nombre es nulo, devuielve 0, son no lo puede abrir o leer 0, si falla write o, sino devuelve el numero actual de letras que lee e imprime
+ * Return: si nombre es nulo, devuielve 0, son no lo puede abrir o leer 0
+ * si falla write o, sino devuelve el numero actual de letras que lee e imprime
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -15,8 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 		return (0);
-
-	buffer = malloc(letters);	
+	buffer = malloc(letters);
 	if (!buffer)
 		return (0);
 
