@@ -25,7 +25,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (openf == -1)
 		return (-1);
-	
+
 	cant = strlen(text_content);
 	writef = write(openf, text_content, cant);
 
