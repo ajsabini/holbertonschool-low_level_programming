@@ -30,6 +30,5 @@ int main()
 			}
 		}
 	}
-	printf("%s",buffer);
 	return(0);
 }
