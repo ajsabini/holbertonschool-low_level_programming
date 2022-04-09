@@ -25,29 +25,46 @@ typedef struct tokenizar
 	struct tokenizar *next;
 } tokeniza;
 
+/*cheks.c*/
+int check_slash(char *buffer);
+int check_space(char *buffer);
+int check_built(char *buffer);
+void change_tabs(char *buffer);
 
-char *_strdup(char *str);
-int _strlen(char *s);
+/*ofunctions.c*/
+int command(tokeniza *head, char *path_concat);
+void _fsignal(int sig);
+int _fexit(char *buffer);
+char **cpy_environ();
 
-void addnode(list_t **head, char *s);
-void free_nodes(list_t *head);
+/*ofunctions2.c*/
+void dirs(tokeniza **directorys, tokeniza **pwd, tokeniza **old_pwd);
+void free_all(char *buffer, tokeniza *old_pwd, tokeniza *pwd, tokeniza *directorys);
+int _env(char *buffer);
 
-
-void tokenizer(char *env, list_t **directorys, const char *delim);
-char *_concat(list_t *dir, list_t *input);
-int command(list_t *head, char *path_concat);
+/*stats.c*/
+char *_concat(tokeniza *dir, tokeniza *input);
 int get_stat(char *path_concat);
-char *getpath();
 
-void _signal(int sig);
-int regular_file(char *s);
-int funexit(char *buffer);
+/*strs.c*/
+char *_strdup(char *str);
+int _strlen(char *str);
+/*int _strcmp(char *s1, char *s2)*/
 
-int check_directory(list_t *input);
-int check_files(list_t *directorys, list_t *input);
+/*gets.c*/
+char *get_pwd();
+char *get_oldpwd();
+char *get_path();
 
-int check_slash(char *s);
-int check_space(char *s);
+/*tokens*/
+void add_node(tokeniza **head, char *s);
+void tokenizer(char *env, tokeniza **directorys, const char *delim);
+void free_nodes(tokeniza *head);
+
+/*whatis*/
+int check_directory(tokeniza *input);
+int check_files(tokeniza *directorys, tokeniza *input);
+int regular_file(char * path);
 
 #endif
 
