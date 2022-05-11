@@ -1,12 +1,14 @@
-#include "lists.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "lists.h"
+
 /**
  * add_dnodeint - agregar un nuevo nodeo al principio de la dlinked
  * @n: el entero a agregar
  * @head: el head de la lista
  * Return: NULL si falla, sino la direccion de mem del nuevo nodo
  */
+
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new;
