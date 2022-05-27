@@ -2,8 +2,9 @@
 
 /**
  * key_index - obtener el index a traves de una key
- * @key: 
- * 
+ * @key: la llave para obtener el index
+ * @size: el tamaño del array, para obtener el index
+ * Return: el index
  */
 
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
