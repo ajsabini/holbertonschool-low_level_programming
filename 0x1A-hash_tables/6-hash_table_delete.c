@@ -1,9 +1,9 @@
 #include "hash_tables.h"
 
 /**
- *
- *
- *
+ * hash_table_delete - eliminar las hashtables
+ * @ht: la hash table
+ * Return: void
  */
 
 void hash_table_delete(hash_table_t *ht)
@@ -24,7 +24,7 @@ void hash_table_delete(hash_table_t *ht)
 			free(tofree->key);
 			free(tofree->value);
 			free(tofree);
-		}	
+		}		
 	}
 	free(ht->array);
 	free(ht);
