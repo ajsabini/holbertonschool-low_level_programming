@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * linear_search - 
+ * linear_search - searches value in an array of int with LSA
  * @array: pointer to the first element of array to search
  * @size: array length
  * @value: value to search
@@ -11,6 +11,7 @@
 int linear_search(int *array, size_t size, int value)
 {
 	size_t i = 0;
+
 	if (array == NULL)
 		return (-1);
 
