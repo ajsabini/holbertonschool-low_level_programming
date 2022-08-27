@@ -10,14 +10,28 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-	size_t mitad, inicial = 0;
+	size_t mitad, inicial, i = 0;
 	size_t final = size - 1;
 
 	if (array == NULL)
 		return (-1);
 
+	printf("Searching in array: ");
+
 	while (inicial <= final)
 	{
+		printf("Searching in array: ");
+		
+		for (i = inicial; i <= final; i++)
+		{
+			if (i == final)
+			{
+				printf("%d, ", array[i]);
+			}
+		}
+
+		printf("\n");
+
 		mitad = ((final - inicial) / 2) + inicial;
 		if (value == array[mitad])
 		{
