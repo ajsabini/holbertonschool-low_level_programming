@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * linear_search - searches value in an array of int with LSA
+ * binary_search - searches value in an array of int with BSA
  * @array: pointer to the first element of array to search
  * @size: array length
  * @value: value to search
@@ -18,10 +18,10 @@ int binary_search(int *array, size_t size, int value)
 
 	while (inicial <= final)
 	{
-		mitad = ((final-inicial) / 2) + inicial;
+		mitad = ((final - inicial) / 2) + inicial;
 		if (value == array[mitad])
 		{
-			return value;
+			return (value);
 		}
 		if (value < array[mitad])
 		{
@@ -32,6 +32,6 @@ int binary_search(int *array, size_t size, int value)
 			inicial = mitad + 1;
 		}
 	}
-	
+
 	return (-1);
 }
