@@ -16,11 +16,10 @@ int binary_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 
-	printf("Searching in array: ");
 	while (inicial <= final)
 	{
 		printf("Searching in array: ");
-		mitad = (final - inicial) / 2;
+		mitad = (final + inicial) / 2;
 		i = inicial;
 
 		for (; i <= final; i++)
